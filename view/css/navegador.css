@@ -1,0 +1,61 @@
+.panel,
+.spinner {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.spinner {
+    background-color: black;
+}
+
+.panel header {
+    width: 100%;
+    height: 10%;
+    background-color: rgba(89, 84, 84, 0.645);
+    position: fixed;
+    display: flex;
+    justify-content:end ;
+    align-items: center;
+}
+.panel header .topeMaximo{
+    margin-left: 15px;
+}
+.panel header button {
+    margin-right: 10px;
+    width: 100px;
+    height: 20px;
+    background-color: rgba(217, 214, 214, 0.944);
+    border: 0;
+    border-radius: 10px;
+}
+.panel .agregarTope{
+    width: 100%;
+    height: 8%;
+    background-color: rgb(138, 43, 226);
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.panel div{
+    width: 100%;
+    height: 78%;
+    position: absolute;
+    background-image: url('../img/logo.jpg');
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: 100% 100% ;
+}
+.panel div .sectionRegistro{
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    background-color: rgb(177, 177, 180);
+}
+
+   
