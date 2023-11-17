@@ -26,11 +26,7 @@
     <input id="btnIniciar" class="buttons" type="button" value="Ingresar" />
     <p><a href="#">¿Olvidastes tu Contraseña?</a></p>
   </section>
-  <section id="spinner" class="spinner">
-    <img
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjULWjY6FdZ6JgyW1kjJe36rfLmYX9JmabhF_pcZVYY6fM7nC_-rr1SgWAN14DGDoylVQ&usqp=CAU"
-      alt="" />
-  </section>
+  <section id="spinner" class="spinner"></section>
   <main id="panel" class="panel">
     <header>
       <button id="registrar">Registrar</button>
@@ -38,7 +34,6 @@
       <button id="listar">Listar</button>
       <button id="cerrarSesion">Cerrar sesión</button>
     </header>
-  
     <section id="agregarTope" class="agregarTope">
       <label for="topeMaximoInput">Ingrese el tope máximo:</label>
       <input type="number" id="topeMaximoInput" />
@@ -48,7 +43,8 @@
     <div>
       <section id="sectionRegistro" class="sectionRegistro">
         <form action="">
-          <label for="fcategoria">Categoria</label>
+          <h3>Registrar un gasto</h3>
+          <label for="fcategoria" class="">Categoria</label>
           <input id="fcategoria" type="text">
           <label for="fdescripcion">Descripcion</label>
           <input id="fdescripcion" type="text">

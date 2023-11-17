@@ -89,54 +89,101 @@ body {
 .form-login a:hover {
   text-decoration: underline;
 }
+
 .panel,
 .spinner {
-    width: 100%;
-    height: 100vh;
-    background-color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-    
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background-image: url('../img/logo.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
-.spinner {
-    background-color: black;
-} 
-.panel header{
+.panel header {
   width: 100%;
-  height: 80px;
-  background-color: aqua;
+  height: 8%;
+  background-color: rgba(89, 84, 84, 0.645);
+  ;
   display: flex;
   justify-content: end;
   align-items: center;
   flex-direction: row;
 }
-.panel div{
-  background-image: url('../img/fondo.png');
+
+.panel header button {
+  margin-right: 10px;
+  width: 120px;
+  height: 20px;
+  background-color: rgba(120, 113, 113, 0.645);
+  border: 0;
+  border-radius: 10px;
+  font-size: 16px;
 }
-.panel div section{
+
+.panel .agregarTope {
+  width: 100%;
+  height: 8%;
+  background-color: rgb(104, 103, 105);
+  border-top: 5px, solid, black;
+  display: flex;
+  align-items: center;
+}
+.panel .agregarTope input {
+  margin-left: 5px;
+  border-radius: 10px;
+  height: 24px;
+  border: 0;
+  background-color: rgba(157, 153, 153, 0.866);
+}
+.panel .agregarTope label{
+ margin-left: 12%;
+ font-size: 18px;
+}
+.panel .agregarTope button {
+  margin-left: 5px;
+  width: 8%;
+  height: 24px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 10px;
+  background-color: rgba(201, 198, 198, 0.746);
+
+}
+.panel .agregarTope p{
+  margin-left: 10%;
+  font-size: 18px;
+}
+.panel div section {
   width: 100%;
   height: 100vh;
   position: absolute;
- 
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap:10px;
-}
-.panel .sectionRegistro{
-  background-color: rgb(60, 0, 255);
 }
 
-.card{
-  width:200px;
-  height: 200px;
-  background-color: black;
-  color: white;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  align-items: center;
+.panel .sectionRegistro form {
+  width: 100%;
+  height: 50%;
+  background-color: rgb(201, 200, 204);
+
+}
+.panel .sectionRegistro  form h3{
+  margin-left: 40%;
+  margin-top: 20px;
+}
+.panel .sectionBuscar {
+  width: 100%;
+  height: 50%;
+  background-color: #02597c;
+}
+
+.panel .sectionListar {
+  width: 100%;
+  height: 50%;
+  background-color: papayawhip;
 }

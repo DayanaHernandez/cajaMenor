@@ -38,59 +38,62 @@ cerrarSesion.addEventListener("click", () => {
 var btnAsignar = document.getElementById("btnAsignar");
 btnAsignar.addEventListener("click", () => {
   let prueba = document.getElementById("topeMaximoInput").value;
-  document.getElementById("topeMaximo").innerText = "Tope Maximo: " + prueba;
-});
-
-let listar = document.getElementById('listar')
-listar.addEventListener('click', function () {
-    document.getElementById('sectionListar').innerHTML = ''//formateador de codigo 
-    document.getElementById('sectionListar').style.zIndex = '3'
-    document.getElementById('sectionBuscar').style.zIndex = '2'
-    document.getElementById('sectionRegistro').style.zIndex = '2'
-    //Siempre se debe de trabajar con una funcion dentro del metodo
-    gastos.map((gasto) => {
-        let categoria = document.createElement('p')
-        let descripcion = document.createElement('p')
-        let valor = document.createElement('p')
-        let card = document.createElement('article')
-        categoria.textContent = gasto.categoria
-        descripcion.textContent = gasto.descripcion
-        valor.textContent = gasto.valor
-        card.classList.add('card')
-        card.append(categoria, descripcion, valor)
-        document.getElementById('sectionListar').append(card)
-    })
+  document.getElementById("topeMaximo").innerText = "Tope Máximo: " + prueba;
+  
+  // let porcentaje = (contador/prueba) *100
+  // if(porcentaje)
 })
 
 let registrar = document.getElementById('registrar')
-// if(prueba > 0 && btnIniciar )
 registrar.addEventListener('click', function () {
-    document.getElementById('sectionListar').style.zIndex = '2'
-    document.getElementById('sectionBuscar').style.zIndex = '2'
-    document.getElementById('sectionRegistro').style.zIndex = '3'
+  document.getElementById('sectionListar').style.zIndex = '2'
+  document.getElementById('sectionBuscar').style.zIndex = '2'
+  document.getElementById('sectionRegistro').style.zIndex = '3'
 })
 let btnGuardar = document.getElementById('btnGuardar')
 btnGuardar.addEventListener('click', () => {
-    let fcategoria = document.getElementById('fcategoria').value
-    let fdescripcion = document.getElementById('fdescripcion').value
-    let fvalor = document.getElementById('fvalor').value
-    let gasto = {
-        id: Math.random() * 10,
-        categoria: fcategoria,
-        descripcion: fdescripcion,
-        valor: fvalor
-    }
-    gastos.push(gasto)
-    
+  let contador
+  let fcategoria = document.getElementById('fcategoria').value
+  let fdescripcion = document.getElementById('fdescripcion').value
+  let fvalor = document.getElementById('fvalor').value
+  let gasto = {
+    id: Math.random() * 10,
+    categoria: fcategoria,
+    descripcion: fdescripcion,
+    valor: fvalor
+  }
+  gastos.push(gasto)
+  contador += fvalor
+  console.log(contador)
+
 })
 
 let buscar = document.getElementById('buscar')
 buscar.addEventListener('click', function () {
-    document.getElementById('sectionListar').style.zIndex = '2'
-    document.getElementById('sectionBuscar').style.zIndex = '3'
-    document.getElementById('sectionRegistro').style.zIndex = '2'
+  document.getElementById('sectionListar').style.zIndex = '2'
+  document.getElementById('sectionBuscar').style.zIndex = '3'
+  document.getElementById('sectionRegistro').style.zIndex = '2'
 })
 
-
+let listar = document.getElementById('listar')
+listar.addEventListener('click', function () {
+  document.getElementById('sectionListar').innerHTML = ''//formateador de codigo 
+  document.getElementById('sectionListar').style.zIndex = '3'
+  document.getElementById('sectionBuscar').style.zIndex = '2'
+  document.getElementById('sectionRegistro').style.zIndex = '2'
+  //Siempre se debe de trabajar con una funcion dentro del metodo
+  gastos.map((gasto) => {
+    let categoria = document.createElement('p')
+    let descripcion = document.createElement('p')
+    let valor = document.createElement('p')
+    let card = document.createElement('article')
+    categoria.textContent = gasto.categoria
+    descripcion.textContent = gasto.descripcion
+    valor.textContent = gasto.valor
+    card.classList.add('card')
+    card.append(categoria, descripcion, valor)
+    document.getElementById('sectionListar').append(card)
+  })
+})
 
 
