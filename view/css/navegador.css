@@ -1,4 +1,4 @@
-.panel,
+/* .panel,
 .spinner {
     width: 100%;
     height: 100vh;
@@ -7,6 +7,10 @@
     top: 0;
     left: 0;
     display: none;
+    background-image: url('../img/logo.jpg');
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: 100% 100% ;
 }
 
 .spinner {
@@ -46,16 +50,21 @@
     width: 100%;
     height: 78%;
     position: absolute;
-    background-image: url('../img/logo.jpg');
-    background-position: center ;
-    background-repeat: no-repeat;
-    background-size: 100% 100% ;
+ 
 }
-.panel div .sectionRegistro{
+.panel .sectionRegistro{
     width: 100%;
     height: 80vh;
     position: absolute;
+    top: 10%;
+    left: 0;    
     background-color: rgb(177, 177, 180);
 }
-
-   
+.panel .sectionBuscar{
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    top: 10%;
+    left: 0; 
+    background-color: rgb(177, 177, 180);
+}   */

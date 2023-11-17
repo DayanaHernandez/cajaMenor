@@ -38,34 +38,32 @@
       <button id="listar">Listar</button>
       <button id="cerrarSesion">Cerrar sesión</button>
     </header>
-    <br>
-    <br>
-    <br>
+  
     <section id="agregarTope" class="agregarTope">
       <label for="topeMaximoInput">Ingrese el tope máximo:</label>
       <input type="number" id="topeMaximoInput" />
       <button id="btnAsignar">Asignar</button>
       <p id="topeMaximo"></p>
     </section>
-   <div id="logo">
+    <div>
       <section id="sectionRegistro" class="sectionRegistro">
-        <h2>Registrar un gasto</h2>
-        <label for="valor">Ingresa el valor del gasto: </label>
-        <input type="number" id="valor">
-        <label for="opcCategoria">Categoria:</label>
-       <input type="text" id="opcCategoria">  
-        <label>Descripcion</label>
-        <input type="Text" id="descripcion">
-        <button onclick=""id="agregar">Agregar gasto</button>
+        <form action="">
+          <label for="fcategoria">Categoria</label>
+          <input id="fcategoria" type="text">
+          <label for="fdescripcion">Descripcion</label>
+          <input id="fdescripcion" type="text">
+          <label for="fvalor">Valor</label>
+          <input id="fvalor" type="text">
+          <input type="button" value="Guardar" id="btnGuardar">
+        </form>
       </section>
-      <section id="sectionBuscar">Buscar</section>
+      <section class="sectionBuscar" id="sectionBuscar">Buscar</section>
       <section id="sectionListar">Listar</section>
-   </div>
+    </div>
+    
   </main>
   <script type="module" src="./view/js/login.js"></script>
-  <script type="module" src="./controller/ControllerContrasena.js"></script>
-  <script type="module" src="./controller/ControllerListado.js"></script>
-  <script type="module" src="./controller/ControllerRegistro.js"></script>
+  <script type="module" src="./controller/ControllerGastos.js"></script>
 </body>
 
 </html>
