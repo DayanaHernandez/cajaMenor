@@ -37,11 +37,8 @@ cerrarSesion.addEventListener("click", () => {
 // Tope Maximo
 var btnAsignar = document.getElementById("btnAsignar");
 btnAsignar.addEventListener("click", () => {
-  let prueba = document.getElementById("topeMaximoInput").value;
-  document.getElementById("topeMaximo").innerText = "Tope Máximo: " + prueba;
-  
-  // let porcentaje = (contador/prueba) *100
-  // if(porcentaje)
+  let topeMaximo = document.getElementById("topeMaximoInput").value;
+  document.getElementById("topeMaximo").innerText = "Tope Máximo: " + topeMaximo;
 })
 
 let registrar = document.getElementById('registrar')
@@ -50,22 +47,44 @@ registrar.addEventListener('click', function () {
   document.getElementById('sectionBuscar').style.zIndex = '2'
   document.getElementById('sectionRegistro').style.zIndex = '3'
 })
+let totalGasto = 0
 let btnGuardar = document.getElementById('btnGuardar')
 btnGuardar.addEventListener('click', () => {
-  let contador
-  let fcategoria = document.getElementById('fcategoria').value
-  let fdescripcion = document.getElementById('fdescripcion').value
-  let fvalor = document.getElementById('fvalor').value
+  let cateSeleccionada = document.getElementById('opciones');
+  let fcategoria = cateSeleccionada.value;
+  let fdescripcion = document.getElementById('fdescripcion').value;
+  let fvalor = parseInt(document.getElementById('fvalor').value);
+  totalGasto += fvalor
+  console.log(totalGasto)
+  console.log(fcategoria)
+  document.getElementById('opciones').value = ''
+  document.getElementById('fdescripcion').value = ''
+  document.getElementById('fvalor').value = ''
   let gasto = {
     id: Math.random() * 10,
     categoria: fcategoria,
     descripcion: fdescripcion,
     valor: fvalor
   }
-  gastos.push(gasto)
-  contador += fvalor
-  console.log(contador)
+  if (fvalor >= 1000) {
+    gastos.push(gasto)
 
+  } else {
+    alert("El gasto debe ser mayor o igual a $1000")
+  }
+
+  let topeMaximo = document.getElementById("topeMaximoInput").value;
+  let valorTopeMaximo = document.getElementById('topeMaximo')
+  let porcentaje = (totalGasto/topeMaximo)*100
+  if (porcentaje <= 25){
+  valorTopeMaximo.style.backgroundColor = "green";
+} else if (porcentaje <=50) {
+    valorTopeMaximo.style.backgroundColor = "yellow";
+  } else if (porcentaje <=75) {
+    valorTopeMaximo.style.backgroundColor = "red";
+  } else if (porcentaje <=90) {
+    alert((porcentaje - totalGasto) + "falta para llegar al tope maximo ")
+  }
 })
 
 let buscar = document.getElementById('buscar')
@@ -73,7 +92,23 @@ buscar.addEventListener('click', function () {
   document.getElementById('sectionListar').style.zIndex = '2'
   document.getElementById('sectionBuscar').style.zIndex = '3'
   document.getElementById('sectionRegistro').style.zIndex = '2'
+
+  let filtroCategoria = document.getElementById('opciones').value
+
+  gastos.forEach((gasto) => {
+    if (filtroCategoria == gasto.categoria) {
+      let categoria = document.createElement('p')
+      let fecha = document.createElement('p')
+      let valor = document.createElement('p')
+      let usuario = document.createElement('p')
+      categoria.textContent = gasto.categoria
+      fecha.dataset
+      valor.textContent = gasto.valor
+      usuario.textContent = usuario
+    }
+  })
 })
+
 
 let listar = document.getElementById('listar')
 listar.addEventListener('click', function () {

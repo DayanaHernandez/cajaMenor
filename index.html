@@ -44,8 +44,14 @@
       <section id="sectionRegistro" class="sectionRegistro">
         <form action="">
           <h3>Registrar un gasto</h3>
-          <label for="fcategoria" class="">Categoria</label>
-          <input id="fcategoria" type="text">
+          <label for="opciones" class="">Categoria</label>
+          <select id="opciones">
+            <option >Todos</option>
+            <option value="negocio">Negocios</option>
+            <option value="diversion">Diversion</option>
+            <option value="comida">Comida</option>
+            <option value="transporte">Transporte</option>
+            </select>
           <label for="fdescripcion">Descripcion</label>
           <input id="fdescripcion" type="text">
           <label for="fvalor">Valor</label>
@@ -53,8 +59,17 @@
           <input type="button" value="Guardar" id="btnGuardar">
         </form>
       </section>
-      <section class="sectionBuscar" id="sectionBuscar">Buscar</section>
-      <section id="sectionListar">Listar</section>
+      <section class="sectionBuscar" id="sectionBuscar">
+        <label for="opciones" class="">Categoria</label>
+          <select id="opciones">
+            <option >Todos</option>
+            <option value="negocio">Negocios</option>
+            <option value="diversion">Diversion</option>
+            <option value="comida">Comida</option>
+            <option value="transporte">Transporte</option>
+            </select>
+      </section>
+      <section class="sectionListar"id="sectionListar">Listar</section>
     </div>
     
   </main>
